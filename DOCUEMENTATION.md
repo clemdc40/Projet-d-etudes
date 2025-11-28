@@ -29,3 +29,16 @@ Exemple :
     - SN_GOBUSTER
 - Noms pour les api : 
     - /api/call_gemini
+
+## API
+Pour l'API nous avons choisit FastAPI sur le script api.py.
+
+```python
+@app.get("/api/gemini")
+def read_gemini(message: str = None):
+    if message is None:
+        message = get_gemini_response("Pour un pentest sur site web, quels sont les outils les plus utilisés ?")
+    return {"message": message}
+```
+
+Ce code va nous permettre d'envoyer des messages à gémini, qui sera le coeur de notre orchestrator
