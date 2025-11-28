@@ -18,4 +18,14 @@ Ce projet à pour but d'automatiser un pentest avec 4 catégories différentes :
 Utilisation de Exegol dans docker car tous les outils de pentest sont déjà installés.
 
 ## Aperçu du projet
-Le but de ce projet est d'héberger une machine "Exegol" et une base postgres sur docker. L'utilisateur utilisera le projet sur exegol, avec une interface web. Il entrera une cible, sélectionnera un des modes vu précédemment, puis lancera le pentest. L'orchestrator, LLM, va automatiquement distribuer les taches aux différents services (nmap, gobuster, ...), jusqu'a pouvoir faire un rapport sur les vulnérabilitées.
+Le but de ce projet est d'héberger une machine "Exegol" et une base postgres sur docker. L'utilisateur utilisera le projet sur exegol, avec une interface web. Il entrera une cible, sélectionnera un des modes vu précédemment, puis lancera le pentest. L'orchestrator, LLM, va automatiquement distribuer les taches aux différents services (nmap, gobuster, ...), jusqua pouvoir faire un rapport sur les vulnérabilitées.
+
+## Les variables
+Pour des raisons pratiques, les variables auront un formatage bien précis.
+Exemple : 
+- Variable de nom de service
+    - SN_NMAP
+    - SN_SQLMAP
+    - SN_GOBUSTER
+- Noms pour les api : 
+    - /api/call_gemini
